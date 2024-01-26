@@ -34,7 +34,8 @@ function dragModal(element: HTMLElement) {
     pos3 = activeElementBounds.left + offset.x + 80,
     pos4 = activeElementBounds.top + offset.y;
 
-  element.onmousedown = dragMouseDown;
+  const header = document.querySelector("#support-header") as HTMLDivElement;
+  header.onmousedown = dragMouseDown;
 
   function dragMouseDown(e: MouseEvent) {
     console.log("dragMouseDown");
@@ -51,7 +52,6 @@ function dragModal(element: HTMLElement) {
     pos2 = pos4 - e.clientY;
     pos3 = e.clientX;
     pos4 = e.clientY;
-    console.log(pos1, pos2, pos3, pos4);
     element.style.top = element.offsetTop - pos2 + "px";
     element.style.left = element.offsetLeft - pos1 + "px";
   }
