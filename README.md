@@ -20,7 +20,7 @@ Support Our Mob, is a Chrome extension that allows you to right click on any inp
 
 3) **On Your Chromium Based Browser:** Extension > Load unpacked > locate "dist" (folder built via npm run build) > reload the web page you want to use it on
 
-enjoy :^)
+enjoy c):^)
 
 
 ### Acknowledgements
