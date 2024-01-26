@@ -5,9 +5,6 @@ chrome.runtime.onInstalled.addListener(function () {
     id: "support_our_mob",
   });
 
-  // add icon to context menu
- 
-
   chrome.contextMenus.onClicked.addListener(function () {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       const tab = tabs[0];
