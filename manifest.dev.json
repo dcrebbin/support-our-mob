@@ -10,7 +10,7 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["icons/icon128.png"],
+      "resources": ["icon128.png"],
       "matches": []
     }
   ]
