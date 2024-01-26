@@ -14,7 +14,7 @@ Support Our Mob, is a Chrome extension that allows you to right click on any inp
 
 ## Technical Tutorial
 
-1) npm i
+1) npm i --legacy-peer-deps (will fix this at a later date)
 
 2) npm run build
 
@@ -28,5 +28,3 @@ enjoy c):^)
 <hr>
 
 [Support Our Mob by Devon Crebbin](https://github.com/dcrebbin)
-
-[Typescript Chrome Extension Starter by Tomofumi Chiba](https://github.com/chibat/chrome-extension-typescript-starter)
