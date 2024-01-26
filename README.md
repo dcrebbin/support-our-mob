@@ -1,5 +1,7 @@
 # Support Our Mob 🖤💛❤️ - Chrome Extension
 
+[Few Issues on a variety of websites]
+
 Support Our Mob, is a Chrome extension that allows you to right click on any input to display an option to show mob your support by instantly adding these emojis: 🖤💛❤️
 
 Powered by [Chrome Extensions](https://developer.chrome.com/docs/extensions), [Vite](https://vitejs.dev/), [React](https://react.dev/) & [Tailwind](https://tailwindcss.com/)
