@@ -27,16 +27,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 function dragModal(element: HTMLElement) {
-  const bounds = document.activeElement!.getBoundingClientRect();
-  const size = { width: bounds.width, height: bounds.height };
-  let pos1 = bounds.left + offset.x + size.width / 2,
-    pos2 = bounds.top + offset.y + size.height / 2,
-    pos3 = bounds.left + offset.x + size.width / 2,
-    pos4 = bounds.top + offset.y + size.height / 2;
+  const activeElementBounds = document.activeElement!.getBoundingClientRect();
+
+  let pos1 = activeElementBounds.left + offset.x,
+    pos2 = activeElementBounds.top + offset.y,
+    pos3 = activeElementBounds.left + offset.x + 80,
+    pos4 = activeElementBounds.top + offset.y;
 
   element.onmousedown = dragMouseDown;
 
-  function dragMouseDown(e: any) {
+  function dragMouseDown(e: MouseEvent) {
     console.log("dragMouseDown");
     e = e || window.event;
     e.preventDefault();
@@ -44,8 +44,8 @@ function dragModal(element: HTMLElement) {
     document.onmousemove = elementDrag;
   }
 
-  function elementDrag(e: any) {
-    e = e || window.event;
+  function elementDrag(e: MouseEvent) {
+    e = e || (window.event as MouseEvent);
     e.preventDefault();
     pos1 = pos3 - e.clientX;
     pos2 = pos4 - e.clientY;
