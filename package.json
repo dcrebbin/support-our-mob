@@ -1,8 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "support-our-mob-chrome-extension",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
-  "main": "index.js",
+  "description": "Right click on any input to display an option to show mob your support by instantly adding these emojis: 🖤💛❤️",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
     "build": "webpack --config webpack/webpack.prod.js",
@@ -10,11 +9,11 @@
     "test": "npx jest",
     "style": "prettier --write \"src/**/*.{ts,tsx}\""
   },
-  "author": "",
+  "author": "Devon Crebbin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+    "url": "https://github.com/dcrebbin/support-our-mob.git"
   },
   "dependencies": {
     "react": "^18.2.0",
