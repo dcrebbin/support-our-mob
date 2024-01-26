@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React from "react";
 
 export default function Modal(): JSX.Element {
@@ -6,7 +5,7 @@ export default function Modal(): JSX.Element {
   return (
     <div id="support" className="hidden bg-black text-white font-sans p-2 absolute top-0 z-[99999] drop-shadow-xl w-[175px] rounded-md">
       <div className="flex items-center justify-center gap-1">
-        <h1 className="font-serif">Show Your Support!</h1>
+        <h1 className="font-serif">Show Your support!</h1>
         <div className="w-6 h-6 flex items-center justify-center">
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40px" height="20px" viewBox="0 0 10 6">
             <path d="M0,0h10v6H0z" />
