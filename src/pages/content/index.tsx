@@ -7,7 +7,8 @@ const offset = { x: -80, y: -100 };
 
 function showModal() {
   const modal = document.querySelector("#support") as HTMLDivElement;
-  modal.style.display = "block";
+  modal.classList.remove("hidden");
+  modal.classList.add("block");
 }
 
 function updatePosition() {
@@ -16,7 +17,11 @@ function updatePosition() {
   if (!activeElementBounds) {
     return;
   }
-  modal.style.transform = `translate(${activeElementBounds.x + offset.x}px, ${activeElementBounds.y + offset.y}px)`;
+  if (activeElementBounds.y < 100) {
+    modal.style.transform = `translate(${activeElementBounds.x + offset.x}px, ${activeElementBounds.y - offset.y}px)`;
+  } else {
+    modal.style.transform = `translate(${activeElementBounds.x + offset.x}px, ${activeElementBounds.y + offset.y}px)`;
+  }
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
