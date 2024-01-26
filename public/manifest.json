@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Support Our Mob 🖤💛❤️",
-  "description": "Right click on any input to display an option to show mob your support by instantly add these emojis: 🖤💛❤️",
+  "description": "Right click on any input to display an option to show mob your support by instantly adding these emojis: 🖤💛❤️",
   "version": "1.0",
   "action": {
     "default_icon": {
