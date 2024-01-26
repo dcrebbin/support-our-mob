@@ -3,6 +3,7 @@
   "name": "Support Our Mob 🖤💛❤️",
   "description": "Right click on any input to display an option to show mob your support by instantly adding these emojis: 🖤💛❤️",
   "version": "1.0",
+  "author": "Devon Crebbin",
   "action": {
     "default_icon": {
       "16": "icons/icon16.png",
@@ -24,7 +25,6 @@
       "js": ["js/vendor.js", "js/content_script.js"]
     }
   ],
-
   "background": {
     "service_worker": "js/service_worker.js"
   },
