@@ -7,21 +7,36 @@ export default function Popup(): JSX.Element {
         </div>
         <hr className="text-white"></hr>
         <div className="flex flex-col gap-1">
-          <p>
+          <div>
             Created by{" "}
-            <a className="underline" href="https://itsourland.org.au">
+            <button
+              onClick={() => {
+                chrome.tabs.create({ url: "https://itsourland.org.au" });
+              }}
+              className="underline"
+            >
               Ourland Indigenous Corporation
-            </a>
-          </p>
-          <p>
+            </button>
+          </div>
+          <div>
             For more information contact{" "}
-            <a className="underline" href="mailto:devon@itsourland.org.au">
+            <button
+              onClick={() => {
+                chrome.tabs.create({ url: "mailto:devon@itsourland.org.au" });
+              }}
+              className="underline"
+            >
               devon@itsourland.org.au
-            </a>
-          </p>
-          <a className="underline" href="https://github.com/dcrebbin/support-our-mob">
+            </button>
+          </div>
+          <button
+            onClick={() => {
+              chrome.tabs.create({ url: "https://github.com/dcrebbin/support-our-mob" });
+            }}
+            className="underline"
+          >
             Open source Github repository
-          </a>
+          </button>
         </div>
       </div>
     </div>
