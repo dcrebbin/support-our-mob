@@ -4,6 +4,7 @@ import Modal from "@pages/content/Modal";
 import { createRoot } from "react-dom/client";
 
 const offset = { x: -80, y: -100 };
+const cursorPosition = { x: 0, y: 0 };
 
 function showModal() {
   const modal = document.querySelector("#support") as HTMLDivElement;
@@ -13,14 +14,11 @@ function showModal() {
 
 function updatePosition() {
   const modal = document.querySelector("#support") as HTMLDivElement;
-  const activeElementBounds = document.activeElement?.getBoundingClientRect();
-  if (!activeElementBounds) {
-    return;
-  }
-  if (activeElementBounds.y < 100) {
-    modal.style.transform = `translate(${activeElementBounds.x + offset.x}px, ${activeElementBounds.y - offset.y}px)`;
+
+  if (cursorPosition.y < 100) {
+    modal.style.transform = `translate(${cursorPosition.x + offset.x}px, ${cursorPosition.y - offset.y}px)`;
   } else {
-    modal.style.transform = `translate(${activeElementBounds.x + offset.x}px, ${activeElementBounds.y + offset.y}px)`;
+    modal.style.transform = `translate(${cursorPosition.x + offset.x}px, ${cursorPosition.y + offset.y}px)`;
   }
 }
 
@@ -79,6 +77,10 @@ function init() {
   //Super sus setTimeout to wait for modal to render
   setTimeout(() => {
     const modal = document.querySelector("#support") as HTMLDivElement;
+    document.onmousemove = (e) => {
+      cursorPosition.x = e.pageX;
+      cursorPosition.y = e.pageY;
+    };
     dragModal(modal);
   }, 100);
 }
