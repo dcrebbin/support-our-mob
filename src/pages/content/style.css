@@ -13,6 +13,14 @@
   width: 175px;
 }
 
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
 .show-support {
   display: flex;
   justify-content: center;
